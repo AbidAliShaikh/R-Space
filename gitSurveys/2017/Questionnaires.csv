@@ -1,0 +1,48 @@
+Qshort,Indicators,Questions,Q
+CCO01,Course-Content&Organization,The course objectives were clear,1
+CCO02,Course-Content&Organization,The Course workload was manageable,2
+CCO03,Course-Content&Organization,"The Course was well organized (e.g. timely access to materials, notification of changes, etc.)",3
+STC01,Stud.Contribution,Approximate level of your own attendance during the whole Course ,4
+STC02,Stud.Contribution,I participated actively in the Course,5
+STC03,Stud.Contribution,I think I have made progress in this Course,6
+ENV01,Environment,"I think the Course was well structured to achieve the learning outcomes (there was a good balance of lectures, tutorials, practical etc.)",7
+ENV02,Environment,The learning and teaching methods encouraged participation.,8
+ENV03,Environment,The overall environment in the class was conducive to learning.,9
+ENV04,Environment,Classrooms were satisfactory,10
+RES01,Resources,"Learning materials (Lesson Plans, Course Notes etc.) were relevant and useful.",11
+RES02,Resources,Recommended reading Books etc. were relevant and appropriate,12
+RES03,Resources,The provision of learning resources in the library was adequate and appropriate ,13
+RES04,Resources,The provision of learning resources on the Web was adequate and appropriate ( if relevant),14
+QD01,Quality.of.Delivery,The Course stimulated my interest and thought on the subject area,15
+QD02,Quality.of.Delivery,The pace of the Course was appropriate,16
+QD03,Quality.of.Delivery,Ideas and concepts were presented clearly,17
+ASSE01,Assessment,The method of assessment were reasonable ,18
+ASSE02,Assessment,Feedback on assessment was timely,19
+ASSE03,Assessment,Feedback on assessment was helpful,20
+FACEV01,Faculty.Eval,I understood the lectures,21
+FACEV02,Faculty.Eval,The material was well organized and presented,22
+FACEV03,Faculty.Eval,The Teacher was responsive to student needs and problems,23
+FACEV04,Faculty.Eval,Had the Teacher been regular throughout the course?,24
+FACEV05,Faculty.Eval,The Teacher provides the Lecture schedule on the very first lecture,25
+FACEV06,Faculty.Eval,The Teacher provides the Lecture outlines before delivering the lecture,26
+FACEV07,Faculty.Eval,The Teacher is prepared for each class,27
+FACEV08,Faculty.Eval,The Teacher demonstrates knowledge of the subject,28
+FACEV09,Faculty.Eval,The Teacher has completed the whole course,29
+FACEV10,Faculty.Eval,The Teacher provides additional material apart from the textbook,30
+FACEV11,Faculty.Eval,The Teacher gives citations regarding current situations with reference to Pakistani context.,31
+FACEV12,Faculty.Eval,The Teacher communicates the subject matter effectively,32
+FACEV13,Faculty.Eval,The Teacher shows respect towards students and encourages class participation,33
+FACEV14,Faculty.Eval,The Teacher maintains an environment that is conducive to learning,34
+FACEV15,Faculty.Eval,The Teacher arrives on time ,35
+FACEV16,Faculty.Eval,The Teacher leaves on time,36
+FACEV17,Faculty.Eval,The Teacher is fair in examination,37
+FACEV18,Faculty.Eval,The Teacher returns the graded scripts etc. in  a reasonable amount of time,38
+FACEV19,Faculty.Eval,The Teacher was available during the specified office hours and for after class consultations,39
+TUT01,Tutorial,The material in the tutorials was useful,40
+TUT02,Tutorial,I was happy with the amount of work needed for tutorials,41
+TUT03,Tutorial,The Teacher dealt effectively with my problems,42
+PRAC01,Practical,The material in the practical was useful,43
+PRAC02,Practical,The Teacher dealt effectively with my problems during practicals.,44
+FPT,Full.Part.Time,Full.Part.Time,45
+GEND,Gender,Gender,46
+AGEGRP,Age.Grp,Age.Grp,47

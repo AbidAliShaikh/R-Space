@@ -1,0 +1,12 @@
+Dataset:  hairtemp.dat
+
+Source: P. Eaton, M.W. Eaton (1937). "Temperature and the Growth
+of Hair", Science, Vol. 86, #2233, p. 354
+
+Description: Facial Hair growth and daily temperature measurements
+(averages of 10 measurements per month)
+
+Variables/Columns
+Month  7-8
+Average Temp   15-16  /* Degrees F  */
+Facial Hair Growth  22-24  /* mmx1000  */

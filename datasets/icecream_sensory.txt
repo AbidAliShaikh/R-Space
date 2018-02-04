@@ -1,0 +1,43 @@
+Dataset:  icecream_sensory.dat
+
+Source: J.X. Guinard, C. Zoumas-Morse, L. Mori, B. Uatoni, D. Panyam, and A. Kilara (1997).
+"Sugar and Fat Effects on Sensory Properties of Ice Cream," Journal of Food Science,
+Vol. 92, #5, pp. 1087-1094.
+
+Description: Descriptive and Instrumental Measurements  and hedonic ratings,
+made on 9 ice cream fromulations
+at 3 levels of sugar and fat. Descriptors include Appearance, Flavor, and Texture/Mouthfeel
+
+Variables/Columns
+Sample ID   8
+Sugar Level  16  /* 1=Low, 2=Medium, 3=High */
+fat Level    24  /* 1=Low, 2=Medium, 3=High */
+Appearance Variable
+Color Rating   28-32
+Flavor Ratings
+Milky/Dairy    34-40
+Buttery    42-48
+Vanilla   50-56
+Custard/Eggy   58-64
+Almond    66-72
+Sweetness   74-80
+Coolness/Cooling  82-88
+Texture/Mouthfeel Ratings
+Melting Rate   90-96
+Fatty       98-104
+Creamy     106-112
+Fluffy/Aerated   114-120
+Doughy/Pasty/Elastic  122-128
+Ice Crystals   130-136
+Mouthcoating Afterffel   138-144
+Instrumental Measures
+Hardness (g)   146-152
+Tackiness  (g)  154-160
+Melt Rate (%/min)  162-168
+Hedonic Ratings
+Degree of Liking - Texture/Mouthfeel    170-176
+   "    "    "   - Flavor (Taste and Smell)  178-184
+   "    "    "   - Overall     186-192 
+Measured sugar level   (% w/w)
+Measured fat level     (% w/w)
+
