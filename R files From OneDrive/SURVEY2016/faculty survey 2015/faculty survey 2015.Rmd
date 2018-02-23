@@ -1,0 +1,66 @@
+Faculty Survey 2015
+========================================================
+
+
+
+```{r}
+
+f <- read.csv("faculty survey 2015/Faculty Survey 2014 (Responses).csv",header=T)
+
+#cleaning
+f$Timestamp <- as.Date(f$Timestamp,"%m/%d/%Y")
+f = f[grep("(2015)|(2016)",f$Timestamp),]
+levs = c("Very Dissatisfied","Dissatisfied","Uncertain","Satisfied","Very Satisfied")
+for (i in 2:15) f[,i] <- factor(f[,i],levels=levs)
+f$Academic.rank.<- factor(f$Academic.rank.,levels=c("Lecturer","Assistant Professor","Associate Professor","Professor"))
+#*********
+
+library(likert)
+lik <- likert(f[,2:15])
+likert.heat.plot(lik,centered=F,ordered=T,plot.percent.neutral=F)+ggtitle("Faculty Survey during 2015")
+
+f1 <- f[,2:8]
+f2 <- f[,9:15]
+lik1 <- likert(f1,grouping=f[,18])
+lik2 <- likert(f2,grouping=f[,18])
+jpeg(filename="faculty survey 2015/lbp1.jpg",width=600,height=800)
+likert.bar.plot(lik1,centered=F,ordered=T,plot.percent.neutral=F)+ggtitle("Faculty Survey during 2015")
+dev.off()
+
+jpeg(filename="faculty survey 2015/lbp2.jpg",width=600,height=800)
+likert.bar.plot(lik2,centered=F,ordered=T,plot.percent.neutral=F)+ggtitle("Faculty Survey during 2015")
+dev.off()
+#************
+#tabling
+#tt <- t(f[2:15]);a <- melt(tt); b=table(a$X2,a$value)
+#library(vcd);library(gmodels)
+#tab=CrossTable(a$X1,a$value);
+
+
+
+
+```
+
+
+```{r}
+# Core wrapping function
+wrap.it <- function(x, len)
+{ 
+  sapply(x, function(y) paste(strwrap(y, len), 
+                              collapse = "\n"), 
+         USE.NAMES = FALSE)
+}
+
+
+# Call this function with a list or vector
+wrap.labels <- function(x, len)
+{
+  if (is.list(x))
+  {
+    lapply(x, wrap.it, len)
+  } else {
+    wrap.it(x, len)
+  }
+}
+```
+

@@ -1,0 +1,51 @@
+
+Students CEQ -UNDER PROCESS 
+========================================================
+
+INITIALIZING...
+```{r}
+
+library(reshape2)
+#  library(ltm)
+#library(ggplot2)
+library(tidyverse)
+library(vcd)
+library(gmodels)
+library(likert)
+```
+
+READING The file csv below should contain distinct faculty Members' Names other wise they will be treated as one and the output will not be correct
+
+```{r}
+Data <- read_csv('c:/R/Rspace/Student CE Questionnaire/Students CEQ 2016.csv',guess_max = 5000)
+
+Data$uniq <- paste(Data$Course.Title,"taught by",Data$Faculty.Member,"")
+Data <- Data[,c(1:8,109,9:108)]
+d <- names(Data[,1:9])
+Data[,1:9] <- Data %>% select(1:9)%>% lapply(factor) %>%data.frame()
+Data[,10:109] <- Data %>% select(10:109) %>% lapply(as.integer) %>% data.frame()
+
+#melting
+Data <- as.data.frame(Data)
+
+melted.data <- melt(Data,na.rm=T)
+
+m<-melted.data %>% group_by(uniq,variable) %>% summarise(mean(value,na.rm=T))
+
+```
+
+
+
+Cleaning
+```{r}
+#discarding all 5 and missingness > 25% data
+discard1 = apply(ddd,1,function(x) which(sum(is.na(x)) > 11))
+discard2 = apply(ddd,1,function(x) length(unique(x[!is.na(x)])))
+
+a <- ddd[-(which(discard1==1 | discard2==1)),]
+
+
+
+
+```
+
