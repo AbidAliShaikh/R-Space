@@ -1,0 +1,50 @@
+Enrollment 2013-14 from xls file enrollment with Bachelor, Master
+and PhD separate sheets
+========================================================
+
+
+
+```{r}
+bach <- read.csv("Bachelor2015Enrol.csv",header=T)
+bach <- bach[,-grep("X",names(bach))]
+mast <- read.csv("Masters2015Enrol.csv",header=T)
+mast <- mast[,-grep("X",names(mast))]
+phd <- read.csv("PhD2015Enrol.csv",header=T)
+phd <- phd[,-grep("X",names(phd))] 
+
+
+bach = melt(bach,id.vars= names(bach[,1:3]))
+mast = melt(mast,id.vars= names(mast[,1:3]))
+phd = melt(phd,id.vars= names(phd[,1:3]))
+
+enrol <- rbind(bach,mast,phd)
+
+enrol[grep(".F",enrol$variable),6] <- "F"
+enrol[grep(".M",enrol$variable),6] <- "M"
+names(enrol)[6] <- "Gender"
+
+enrol[grep("\\.1",enrol$variable),7] <- "1st Year"
+enrol[grep("\\.2",enrol$variable),7] <- "2nd Year"
+enrol[grep("\\.3",enrol$variable),7] <- "3rd Year"
+enrol[grep("\\.4",enrol$variable),7] <- "4th Year"
+enrol[grep("\\.5",enrol$variable),7] <- "5th Year"
+
+names(enrol)[7] <- "Class"
+
+enrol[grep("Pre",enrol$variable),]$Class <- " Previous"
+enrol[grep("Final",enrol$variable),]$Class <- "Final"
+enrol[grep("Hon",enrol$variable),]$Class <- "Honours"
+
+
+enrol[grep("Bach",enrol$variable),8] <- "Bachelors"
+names(enrol)[8] <- "Level.Edu"
+enrol[grep("Masters",enrol$variable),]$Level.Edu <- "Masters"
+enrol[grep("M.Phil",enrol$variable),]$Level.Edu <- "M.Phil"
+enrol[grep("Ph.D",enrol$variable),]$Level.Edu <- "Ph.D"
+
+write.csv(enrol,"enrol2015.csv")
+
+
+
+```
+
